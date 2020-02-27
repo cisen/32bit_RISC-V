@@ -9,221 +9,211 @@ z2
 cModel Technology
 dD:/Project/model_pro
 valu
-Z0 !s110 1581762012
-!i10b 1
-!s100 WJfXM;zA4IUV;dDT1oCKY2
-I]PSM90;ghWL]FM?gPK^^W1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dD:/Project/verilog_pro/project_module/32_RISC-V/sim
-w1581761370
-8D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v
-FD:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v
-L0 2
-Z3 OL;L;10.4;61
+Z0 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 31
-!s108 1581762012.441000
+!i10b 1
+!s100 a4MNGY3MUH>mzccFCN_1P2
+II0N?dA83dF[hEj4MAWa8H0
+Z1 dD:/Project/verilog_pro/project_module/32_RISC-V/sim
+w1582477022
+8D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v
+FD:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v
+L0 2
+Z2 OL;L;10.4;61
+!s108 1582477234.214000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v|
 !i113 0
-Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z3 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vcompare
 R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 b0X3F0Q9Kd>@=iXEjgLnh3
 IKbM>E9fLF@^kb8H1?H6aW3
 R1
-R2
-w1581755502
+w1581853903
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v
 L0 2
-R3
-r1
-!s85 0
-31
-!s108 1581762012.507000
+R2
+!s108 1582477234.303000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v|
 !i113 0
-R4
+R3
 vdecode
 R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 _D`G]=aQX00e5IOPJh2M91
 IJ;EGkVC=heSVMVUkB1]k73
 R1
-R2
-w1581755507
+w1581853891
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v
 L0 2
-R3
-r1
-!s85 0
-31
-!s108 1581762012.572000
+R2
+!s108 1582477234.373000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v|
 !i113 0
-R4
+R3
 vfetch
 R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 BjGF0X`Hd9:mTEh7AO:Ua3
 IK_0LOzA27zeH@WUP2Q@HN1
 R1
-R2
-w1581761427
+w1581926360
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v
 L0 2
-R3
-r1
-!s85 0
-31
-!s108 1581762012.644000
+R2
+!s108 1582477234.442000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v|
 !i113 0
-R4
+R3
 vimm_gen
 R0
-!i10b 1
-!s100 VcB0gfM<=2aY=O9bTTI[=1
-IF=h^b=JVYalc;YGECHZmK1
-R1
-R2
-w1581755501
-8D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v
-FD:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v
-L0 2
-R3
 r1
 !s85 0
 31
-!s108 1581762012.733000
+!i10b 1
+!s100 hciW?T9>ze<8RB=k_2:6=3
+IboNXVHmP1Nf3^bO5EI;M?1
+R1
+w1581853715
+8D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v
+FD:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v
+L0 2
+R2
+!s108 1582477234.512000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v|
 !i113 0
-R4
+R3
 vmemory
 R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 35hFcliP[U2h57mNnI0em0
 INO@LS9QA00BjO90Q@[2D?3
 R1
-R2
-w1581755504
+w1582474317
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v
 L0 2
-R3
-r1
-!s85 0
-31
-!s108 1581762012.810000
+R2
+!s108 1582477234.580000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v|
 !i113 0
-R4
+R3
 vmemory_wr
 R0
-!i10b 1
-!s100 nT:4Y;ngGdETDc2A5lkh]2
-IMn^cM7AA@D8Jb[RjLJTPF0
-R1
-R2
-w1581762008
-8D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v
-FD:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v
-L0 2
-R3
 r1
 !s85 0
 31
-!s108 1581762012.878000
+!i10b 1
+!s100 hiB=X_EKjFzDQ>B7=aZ321
+IBU^10M=0OCX5KI_2b5S5[3
+R1
+w1581853935
+8D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v
+FD:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v
+L0 2
+R2
+!s108 1582477234.654000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v|
 !i113 0
-R4
+R3
 vmux2to1
 R0
+r1
+!s85 0
+31
 !i10b 1
 !s100 S=4J?<^2ZYGjK4ak^K1Qm1
 IZ2J`MSTHcN==dkEVM`hW_3
 R1
-R2
-w1581755511
+w1581853886
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v
 L0 1
-R3
-r1
-!s85 0
-31
-!s108 1581762012.942000
+R2
+!s108 1582477234.729000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v|
 !i113 0
-R4
+R3
 vregfile
-Z5 !s110 1581762013
+R0
+r1
+!s85 0
+31
 !i10b 1
-!s100 YTe8^akigc?n]i;kj<37H3
-IYKScTFJEYnn:nnhaR]o1E0
+!s100 5RWU[ScX9]V]?i4k4nA0e2
+IoAnI1A<Ih0dgei=i]8i492
 R1
-R2
-w1581755520
+w1581927584
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v
 L0 2
-R3
-r1
-!s85 0
-31
-!s108 1581762013.005000
+R2
+!s108 1582477234.798000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v|
 !i113 0
-R4
+R3
 vtb_top
-R1
+R0
 r1
 !s85 0
 31
 !i10b 1
-!s100 ?Ll8RaTLn`n2[XA:J>4]f3
-I=Cz4P7nlAhn[91`6G0E[K3
-R2
-w1581755510
+!s100 nWF7[25GE3SXMl`1_WcST2
+IHD55]k?17GDBY_H6zYblR1
+R1
+w1581853888
 8D:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v
 FD:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v
 L0 1
-R3
-!s108 1581762013.068000
+R2
+!s108 1582477234.867000
 !s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v|
 !i113 0
-R4
-vtop_riscv
-R5
-!i10b 1
-!s100 Angi[^B[`4XizXBUTbN;:0
-IoRCnkGJbFc7G>R;6@YzDV2
-R1
-R2
-w1581761768
-8D:/Project/verilog_pro/project_module/32_RISC-V/src/top_riscv.v
-FD:/Project/verilog_pro/project_module/32_RISC-V/src/top_riscv.v
-L0 1
 R3
+vtop_riscv
+R0
 r1
 !s85 0
 31
-!s108 1581762013.133000
-!s107 D:/Project/verilog_pro/project_module/32_RISC-V/src/top_riscv.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Project/verilog_pro/project_module/32_RISC-V/src/top_riscv.v|
+!i10b 1
+!s100 ?AP6`S@8edaVJ[bTOAVFB1
+ID[MUB04gH99UEzVb4CN400
+R1
+w1582474810
+8D:\Project\verilog_pro\project_module\32_RISC-V\src\top_riscv.v
+FD:\Project\verilog_pro\project_module\32_RISC-V\src\top_riscv.v
+L0 1
+R2
+!s108 1582477234.936000
+!s107 D:\Project\verilog_pro\project_module\32_RISC-V\src\top_riscv.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:\Project\verilog_pro\project_module\32_RISC-V\src\top_riscv.v|
 !i113 0
-R4
+R3

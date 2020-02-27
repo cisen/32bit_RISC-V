@@ -1,1 +1,78 @@
+D:/Project/verilog_pro/project_module/32_RISC-V/src/top_riscv.v {1 {vlog -work work -vopt -stats=none {D:\Project\verilog_pro\project_module\32_RISC-V\src\top_riscv.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module top_riscv
 
+Top level modules:
+	top_riscv
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/memory.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/memory_wr.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module memory_wr
+
+Top level modules:
+	memory_wr
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/alu.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/regfile.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/fetch.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/compare.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module compare
+
+Top level modules:
+	compare
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/decode.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/imm_gen.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module imm_gen
+
+Top level modules:
+	imm_gen
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/mux2to1.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mux2to1
+
+Top level modules:
+	mux2to1
+
+} {} {}} D:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v {1 {vlog -work work -vopt -stats=none D:/Project/verilog_pro/project_module/32_RISC-V/src/tb_top.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_top
+
+Top level modules:
+	tb_top
+
+} {} {}}

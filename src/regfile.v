@@ -9,21 +9,26 @@ module regfile(
 	
 	input 		[ 4:0] 	wadd,  //wirte data address
 	input 		[31:0] 	wdata, //wirte data
-	
 	input 		[ 4:0] 	radd1, //read data address
-	output reg 	[31:0] 	rs1,   //read operands
-	
 	input 		[ 4:0] 	radd2,
+	
+	output reg 	[31:0] 	rs1,   //read operands
 	output reg 	[31:0] 	rs2
 );
 
-reg [31:0] MEM [0:31];    //registers
+reg [31:0] MEM [31:0];    //registers
 integer i;
+
+initial
+ 	begin
+		MEM[0] <= 0;
+	end
+
 always @ ( posedge CLK or negedge RSTn )
 begin
 	if (!RSTn)
 		begin
-			for ( i = 0; i < 32; i = i+1)
+			for ( i = 0; i < 32; i = i + 1 )
 				MEM [i] <= 0;  //initialization
 		end
 	else

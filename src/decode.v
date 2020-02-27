@@ -78,7 +78,10 @@ end
 always@(posedge CLK or negedge RSTn)
   	begin
   		if (!RSTn)
+  		begin
   			FetStall1 <=1'b0;
+  			
+			end
   		else
   			begin
   				case(INST[6:0])

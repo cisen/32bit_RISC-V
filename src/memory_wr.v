@@ -11,15 +11,15 @@ module memory_wr(
 
 //****************opcode defination****************//
 localparam LB   = 3'b000;//load byte(8bit),sign bit extension to 32bit
-localparam LBU  = 3'b001;//load byte(8bit unsigned),0 extension
-localparam LHW  = 3'b010;//load half word(16bit),sign bit extension to 32bit
-localparam LHWU = 3'b011;//load half word(16bit unsigned),0 extension
-localparam LW   = 3'b100;//load word(32bit)
-localparam SB   = 3'b101;//store low 8bit
-localparam SHW  = 3'b110;//store low 16bit
-localparam SW   = 3'b111;//store word
+localparam LHW  = 3'b001;//load half word(16bit),sign bit extension to 32bit
+localparam LW   = 3'b010;//load word(32bit)
+localparam SB   = 3'b011;//store low 8bit
+localparam SHW  = 3'b100;//store low 16bit
+localparam SW   = 3'b101;//store word
+localparam LBU  = 3'b110;//load byte(8bit unsigned),0 extension
+localparam LHWU = 3'b111;//load half word(16bit unsigned),0 extension
 
-//********************interface*******************//
+//*********************interface********************//
 //cen
 reg 		cen0;
 reg 		cen1;
@@ -68,7 +68,7 @@ end
 //assign cen3 = (RWaddr[11:10] = 2'b11) ? 1 : 0;
 
 //rdata
-always@(*)  //4to1 mux controlled by Rwaddr[11:10] and handling rdata_wire0-3
+always @(posedge CLK or negedge RSTn)   //4to1 mux controlled by Rwaddr[11:10] and handling rdata_wire0-3
   begin
     case(RWaddr[11:10])
     2'b00:  rdata_reg <= rdata0;
@@ -82,7 +82,7 @@ always@(*)  //4to1 mux controlled by Rwaddr[11:10] and handling rdata_wire0-3
 //assign rdata_reg = (RWaddr[11:10] == 2'b10) ? rdata2 : 0;
 //assign rdata_reg = (RWaddr[11:10] == 2'b11) ? rdata3 : 0;
 
-initial
+always @(posedge CLK or negedge RSTn) 
  	begin
 		case(opcode)
 			LB   :
@@ -91,30 +91,32 @@ initial
           				2'b00:
           				   	begin 
           				     	if(rdata_reg[7]==1'b1)
-          				       		Rdata <= {25'h1ff_ffff,rdata_reg[6:0]};
+          				     	begin
+          				       		Rdata = {25'b1111_1111_1111_1111_1111_1111_1,rdata_reg[6:0]};
+          				     	end
           				     	else
-          				       		Rdata <= {25'h0,rdata_reg[6:0]}; 
+          				       		Rdata = {25'b0000_0000_0000_0000_0000_0000_0,rdata_reg[6:0]}; 
           				   	end
           				2'b01:
           				   	begin 
           				   	  	if(rdata_reg[15]==1'b1)
-          				   	  	  	Rdata <= {25'h1ff_ffff,rdata_reg[14:8]};
+          				   	  	  	Rdata = {25'b1111_1111_1111_1111_1111_1111_1,rdata_reg[14:8]};
           				   	  	else
-          				   	  	  	Rdata <= {25'h0,rdata_reg[14:8]}; 
+          				   	  	  	Rdata = {25'b0000_0000_0000_0000_0000_0000_0,rdata_reg[14:8]}; 
           				   	end             
           				2'b10:
           				   	begin 
           				   	  	if(rdata_reg[23]==1'b1)
-          				   	  	  	Rdata <= {25'h1ff_ffff,rdata_reg[22:16]};
+          				   	  	  	Rdata = {25'b1111_1111_1111_1111_1111_1111_1,rdata_reg[22:16]};
           				   	  	else
-          				   	  	  	Rdata <= {25'h0,rdata_reg[22:16]}; 
+          				   	  	  	Rdata = {25'b0000_0000_0000_0000_0000_0000_0,rdata_reg[22:16]}; 
           				   	end
           				2'b11:
           				   	begin 
           				   	  	if(rdata_reg[31]==1'b1)
-          				   	  	  	Rdata <= {25'h1ff_ffff,rdata_reg[30:24]};
+          				   	  	  	Rdata = {25'b1111_1111_1111_1111_1111_1111_1,rdata_reg[30:24]};
           				   	  	else
-          				   	  	  	Rdata <= {25'h0,rdata_reg[30:24]}; 
+          				   	  	  	Rdata = {25'b0000_0000_0000_0000_0000_0000_0,rdata_reg[30:24]}; 
           				   	end          
 					endcase
 				end
@@ -123,19 +125,19 @@ initial
 					case(RWaddr[1:0])
           				2'b00:
           				   	begin 
-          				   	  	Rdata <= {24'h0,rdata_reg[7:0]}; 
+          				   	  	Rdata = {24'b0000_0000_0000_0000_0000_0000,rdata_reg[7:0]}; 
           				   	end
           				2'b01:
           				   	begin 
-          				   	  	Rdata <= {24'h0,rdata_reg[15:8]}; 
+          				   	  	Rdata = {24'b0000_0000_0000_0000_0000_0000,rdata_reg[15:8]}; 
           				   	end             
           				2'b10:
           				   	begin 
-          				   	  	Rdata <= {24'h0,rdata_reg[23:16]}; 
+          				   	  	Rdata = {24'b0000_0000_0000_0000_0000_0000,rdata_reg[23:16]}; 
           				   	end
           				2'b11:
           				   	begin 
-          				   	  	Rdata <= {24'h0,rdata_reg[31:24]}; 
+          				   	  	Rdata = {24'b0000_0000_0000_0000_0000_0000,rdata_reg[31:24]}; 
           				   	end
           			endcase	   	
 				end
@@ -145,16 +147,16 @@ initial
           				1'b0:
           				   	begin 
           				   	  	if(rdata_reg[15]==1'b1)
-          				   	  	  	Rdata <= {17'h1_ffff,rdata_reg[14:0]};
+          				   	  	  	Rdata = {17'b1111_1111_1111_1111_1,rdata_reg[14:0]};
           				   	  	else
-          				   	  	  	Rdata <= {17'h0,rdata_reg[14:0]}; 
+          				   	  	  	Rdata = {17'b0000_0000_0000_0000_0,rdata_reg[14:0]}; 
           				   	end          
           				1'b1:
           				   	begin 
           				   	  	if(rdata_reg[31]==1'b1)
-          				   	  	  	Rdata <= {17'h1_ffff,rdata_reg[30:16]};
+          				   	  	  	Rdata = {17'b1111_1111_1111_1111_1,rdata_reg[30:16]};
           				   	  	else
-          				   	  	  	Rdata <= {17'h0,rdata_reg[30:16]}; 
+          				   	  	  	Rdata = {17'b0000_0000_0000_0000_0,rdata_reg[30:16]}; 
           				   	end            
         			endcase
 				end
@@ -163,23 +165,24 @@ initial
 					case(RWaddr[1])
           				1'b0:
           				   	begin 
-          				   	  	Rdata <= {16'h0,rdata_reg[15:0]}; 
+          				   	  	Rdata = {16'b0000_0000_0000_0000,rdata_reg[15:0]}; 
           				   	end          
           				1'b1:
           				   	begin 
-          				   	  	Rdata <= {16'h0,rdata_reg[31:16]}; 
+          				   	  	Rdata = {16'b0000_0000_0000_0000,rdata_reg[31:16]}; 
           				   	end            
         			endcase
 				end
 			LW  :
 			 	begin
-					Rdata <= rdata_reg;
+					Rdata = rdata_reg;
 				end
+			default:Rdata = 0;
 		endcase
 	end
 
 
-initial
+always @(posedge CLK or negedge RSTn) 
  	begin
 		case(opcode)
 			SB  :
@@ -267,9 +270,9 @@ initial
 
 
 
-memory mem0(.CLK(CLK),.RSTn(RSTn),.CEN(cen0),.WEN(wr),.BWEN(bwen),.A(RWaddr),.D(wdata),.Q(rdata0));
-memory mem1(.CLK(CLK),.RSTn(RSTn),.CEN(cen1),.WEN(wr),.BWEN(bwen),.A(RWaddr),.D(wdata),.Q(rdata1));
-memory mem2(.CLK(CLK),.RSTn(RSTn),.CEN(cen2),.WEN(wr),.BWEN(bwen),.A(RWaddr),.D(wdata),.Q(rdata2));
-memory mem3(.CLK(CLK),.RSTn(RSTn),.CEN(cen3),.WEN(wr),.BWEN(bwen),.A(RWaddr),.D(wdata),.Q(rdata3));
+memory mem0(.CLK(CLK),.RSTn(RSTn),.CEN(cen0),.WEN(wr),.BWEN(bwen),.A(RWaddr[9:0]),.D(wdata),.Q(rdata0));
+memory mem1(.CLK(CLK),.RSTn(RSTn),.CEN(cen1),.WEN(wr),.BWEN(bwen),.A(RWaddr[9:0]),.D(wdata),.Q(rdata1));
+memory mem2(.CLK(CLK),.RSTn(RSTn),.CEN(cen2),.WEN(wr),.BWEN(bwen),.A(RWaddr[9:0]),.D(wdata),.Q(rdata2));
+memory mem3(.CLK(CLK),.RSTn(RSTn),.CEN(cen3),.WEN(wr),.BWEN(bwen),.A(RWaddr[9:0]),.D(wdata),.Q(rdata3));
 
 endmodule

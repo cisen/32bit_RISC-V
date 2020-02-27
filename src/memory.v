@@ -23,7 +23,7 @@ begin
 		end
 	else if (CEN && (!WEN))   //write with BWEN
 		begin
-			for (i = 0;i < 1024; i = i + 1)
+			for (i = 0;i < 32; i = i + 1)
 				memory[A][i] <= BWEN [i] ? D[i] : memory[A][i];
 				//when BWEN[i] 1,memory change;when 0,do not change
 		end
